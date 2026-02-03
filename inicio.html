@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Inicio | Sucamshop</title>
+  <link rel="stylesheet" href="estilossucamshop2.css">
+</head>
+
+<body>
+
+  <!-- MENÚ (el mismo en todas las páginas) -->
+  <header>
+    <div class="logo">
+      <img src="imagenes/logo sucamshop.jpeg">
+    </div>
+
+    <div class="menu-icon" id="menu-icon">☰</div>
+
+    <nav id="menu">
+      <ul>
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="index.html">Productos</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="nosotros.html">Quiénes somos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 🔥 AQUÍ VA EL SLIDER -->
+  <section class="inicio">
+    <!-- slider aquí -->
+  </section>
+
+  <!-- CONTENIDO EXTRA (opcional) -->
+  <section class="bienvenida">
+    <h2>Bienvenido a Sucamshop</h2>
+    <p>Bolsos, morrales y accesorios con estilo.</p>
+  </section>
+
+  <!-- JS -->
+  <script src="slider.js"></script>
+  <script>
+    const menuIcon = document.getElementById('menu-icon');
+    const menu = document.getElementById('menu');
+
+    menuIcon.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>
