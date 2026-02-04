@@ -43,19 +43,18 @@ nav a:hover {
 
 /* ====== HEADER ====== */
 header {
-  background-color: #ffffff;
-  padding: 1rem 0;
-  text-align: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background-color: #fff;
   position: relative;
   z-index: 5000;
-  background-color: #ffffff;
 }
 
+
 header .logo img {
-            max-width: 20%;
-            right: 500px;
-            position: relative;
+            max-width: 140px;
             }
 
 /* ====== HERO SLIDER ====== */
@@ -188,10 +187,11 @@ header .logo img {
   /* ocultar menú */
   nav {
     display: none;
-    flex-direction: column;
-    background: white;
+    position: absolute;
+    top: 100%;
+    left: 0;
     width: 100%;
-    margin-top: 15px;
+    background: white;
   }
 
   nav ul li {
@@ -203,7 +203,9 @@ header .logo img {
   /* cuando el menú está activo */
   nav.active {
     display: flex;
+    flex-direction: column;
   }
+  
   nav ul {
     flex-direction: column;
     gap: 15px;
