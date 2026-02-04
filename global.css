@@ -7,22 +7,24 @@ nav ul{
     list-style: none; /* quita los puntos */
     display: flex; /* coloca los elementos en línea */  
     justify-content: center; /* centra el menú horizontalmente */
-    gap: 30px;  /* espacio entre los ítems */
+    gap: 180px;  /* espacio entre los ítems */
     margin: 0;  /* elimina relleno del <ul> */
     padding: 0; /* elimina relleno del <ul> */
 }
 
-nav a{
-    text-decoration: none;  /* quita el subrayado */
-    color:black;        /* color del texto */
-    font-weight: bold;
-    font-size: 16px;
-    transition: color 0.3s;   /* animación al pasar el mouse */
+
+nav a {
+  text-decoration: none;
+  color: purple;
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s;
 }
 
-nav a :hover{
-    color:#444;  /* color al pasar el cursor */
+nav a:hover {
+  color: #444;
 }
+
 
 /* ====== ESTILOS GENERALES ====== */
 body {

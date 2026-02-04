@@ -18,18 +18,21 @@ nav {
   padding: 10px 0;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 30px;
+nav ul{
+    list-style: none; /* quita los puntos */
+    display: flex; /* coloca los elementos en línea */  
+    justify-content: center; /* centra el menú horizontalmente */
+    gap: 180px;  /* espacio entre los ítems */
+    margin: 0;  /* elimina relleno del <ul> */
+    padding: 0; /* elimina relleno del <ul> */
 }
+
 
 nav a {
   text-decoration: none;
-  color: black;
+  color: purple;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 18px;
   transition: color 0.3s;
 }
 
@@ -46,8 +49,10 @@ header {
 }
 
 header .logo img {
-  max-width: 180px;
-}
+            max-width: 20%;
+            right: 500px;
+            position: relative;
+            }
 
 /* ====== HERO SLIDER ====== */
 .hero-slider {
@@ -153,4 +158,42 @@ header .logo img {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px
+}
+  /* ====== ICONO HAMBURGUESA ====== */
+.menu-icon {
+  font-size: 28px;
+  cursor: pointer;
+  display: inline-block; /* se oculta en escritorio */
+  
+}
+
+/* ====== RESPONSIVE (pantallas menores a 768px) ====== */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block; /* mostrar icono */
+  }
+
+  nav ul {
+    flex-direction: column; /* menú vertical */
+    background-color:darkgrey;
+    position: absolute;
+    top: 120px;
+    left: 0;
+    width: 100%;
+    display: none; /* oculto por defecto */
+  }
+
+  nav ul li {
+    text-align: center;
+    padding: 15px 0;
+    border-top: 1px solid #444;
+  }
+
+  /* cuando el menú está activo */
+  nav.active ul {
+    display: flex;
+  }
+
+
+  
 }
