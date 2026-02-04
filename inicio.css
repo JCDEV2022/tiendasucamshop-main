@@ -161,26 +161,35 @@ header .logo img {
 }
   /* ====== ICONO HAMBURGUESA ====== */
 .menu-icon {
+  display: none;
   font-size: 28px;
   cursor: pointer;
-  display: none; /* se oculta en escritorio */
-  
 }
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
 
 /* ====== RESPONSIVE (pantallas menores a 768px) ====== */
 @media (max-width: 768px) {
+
+  /* mostrar hamburguesa */
   .menu-icon {
-    display:block; /* mostrar icono */
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
   }
 
-  nav ul {
-    flex-direction: column; /* menú vertical */
-    background-color:darkgrey;
-    position: absolute;
-    top: 120px;
-    left: 0;
+  /* ocultar menú */
+  nav {
+    display: none;
+    flex-direction: column;
+    background: white;
     width: 100%;
-    display: none; /* oculto por defecto */
+    margin-top: 15px;
   }
 
   nav ul li {
@@ -190,8 +199,13 @@ header .logo img {
   }
 
   /* cuando el menú está activo */
-  nav.active ul {
+  nav.active {
     display: flex;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 0;
   }
 
 
