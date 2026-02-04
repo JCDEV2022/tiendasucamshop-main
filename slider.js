@@ -1,22 +1,49 @@
-let index = 0;
-const slides = document.querySelectorAll(".slide");
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelectorAll(".hero-slide");
+  const nextBtn = document.querySelector(".hero-slider .next");
+  const prevBtn = document.querySelector(".hero-slider .prev");
 
-function showSlide(i) {
-  slides.forEach(slide => slide.classList.remove("active"));
-  slides[i].classList.add("active");
-}
+  let current = 0;
+  let sliderInterval = null;
+  const intervalTime = 5000;
 
-document.querySelector(".next").addEventListener("click", () => {
-  index = (index + 1) % slides.length;
-  showSlide(index);
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove("active"));
+    slides[index].classList.add("active");
+  }
+
+  function nextSlide() {
+    current = (current + 1) % slides.length;
+    showSlide(current);
+  }
+
+  function prevSlide() {
+    current = (current - 1 + slides.length) % slides.length;
+    showSlide(current);
+  }
+
+  function startSlider() {
+    // 🔥 clave: SIEMPRE limpiar antes
+    clearInterval(sliderInterval);
+    sliderInterval = setInterval(nextSlide, intervalTime);
+  }
+
+  // Flechas
+  if (nextBtn) {
+    nextBtn.addEventListener("click", () => {
+      nextSlide();
+      startSlider();
+    });
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener("click", () => {
+      prevSlide();
+      startSlider();
+    });
+  }
+
+  // Inicializar
+  showSlide(current);
+  startSlider();
 });
-
-document.querySelector(".prev").addEventListener("click", () => {
-  index = (index - 1 + slides.length) % slides.length;
-  showSlide(index);
-});
-
-setInterval(() => {
-  index = (index + 1) % slides.length;
-  showSlide(index);
-}, 4000);

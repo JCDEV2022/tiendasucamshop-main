@@ -59,11 +59,11 @@ header .logo img {
 
 /* cada slide ocupa el MISMO espacio */
 .hero-slide {
-  position: absolute;
-  inset: 0;
+  position:absolute;
+  inset:0;
   background-size: cover;
   background-position: center;
-  opacity: 0;
+  opacity:0;
   transition: opacity 1s ease-in-out;
 }
 
