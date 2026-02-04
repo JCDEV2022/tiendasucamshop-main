@@ -48,7 +48,7 @@ header {
   text-align: center;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   position: relative;
-  z-index: 1000;
+  z-index: 5000;
   background-color: #ffffff;
 }
 
@@ -64,6 +64,7 @@ header .logo img {
   height: 60vh;
   min-height: 450px;
   overflow: hidden;
+  z-index: 1;
 }
 
 /* cada slide ocupa el MISMO espacio */
@@ -168,6 +169,7 @@ header .logo img {
   font-size: 28px;
   cursor: pointer;
   display: none; /* se oculta en escritorio */
+  z-index: 6000;
 }
 
 
