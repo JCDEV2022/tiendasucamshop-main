@@ -152,7 +152,7 @@ header h1 {
   }
 
   /* cuando el menú está activo */
-  nav.active ul {
+  nav ul.active {
     display: flex;
   }
 }
