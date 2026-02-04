@@ -161,7 +161,6 @@ header .logo img {
 }
   /* ====== ICONO HAMBURGUESA ====== */
 .menu-icon {
-  display: none;
   font-size: 28px;
   cursor: pointer;
 }
